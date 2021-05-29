@@ -20,21 +20,21 @@ The INI-format configuration file is stored in ~/.urpower
 This file contains one entry per system. If a system does not have IPMI, but
 is attached to the PDU, an entry looks like this:
 
-> [home2]
-> pdu = pdu-wb
-> outlet = 6
+    [home2]
+    pdu = pdu-wb
+    outlet = 6
 
 Where, in the above example, "pdu-wb" is the hostname for the PDU, and "6" is
 the outlet number on that PDU.
 
 If the system has IPMI as well as a PDU, an entry looks looks like this:
 
-> [morpheus]
-> pdu = pdu-wt
-> outlet = 4
-> ipmi_host = morpheus-i
-> ipmi_username = admin
-> ipmi_password = admin
+    [morpheus]
+    pdu = pdu-wt
+    outlet = 4
+    ipmi_host = morpheus-i
+    ipmi_username = admin
+    ipmi_password = admin
 
 The additional fields specify the hostname for IPMI as well as the username
 and password of the IPMI interface.
@@ -44,3 +44,4 @@ and password of the IPMI interface.
 In the future, it should be possible to:
 * power cycle a system, using IPMI (if available)
 * power off a system using IPMI while leaving the PDU outlet on
+* have a system with IPMI, but without a PDU
