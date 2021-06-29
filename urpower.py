@@ -209,7 +209,7 @@ class UrPower(object):
                                 capture_output=True)
         return result.returncode == 0
 
-    def _wait_for_ping(self, host, count=10):
+    def _wait_for_ping(self, host, count=50):
         n = 0
         while n < count:
             if self._ping(host):
